@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SEDetailViewController : UIViewController
+@interface SEDetailViewController : UIViewController<UIWebViewDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

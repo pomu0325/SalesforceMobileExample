@@ -144,8 +144,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="cra-N8-TIN"/>
+                    <connections>
+                        <outlet property="webview" destination="fXk-1W-694" id="uJc-as-lR1"/>
+                        <segue destination="fIP-kf-YEI" kind="unwind" identifier="oauthSuccess" unwindAction="oauthSuccess:" id="Php-Xa-xMJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
+                <exit id="fIP-kf-YEI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
         </scene>

@@ -14,4 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *displayNameLabel;
 
+@property NSDictionary *authInfo;
+
+@property NSDictionary *idInfo;
+
 @end
