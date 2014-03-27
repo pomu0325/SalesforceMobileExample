@@ -22,6 +22,7 @@
 		B86F45FC18E2AA8600526A35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86F45DB18E2AA8600526A35 /* UIKit.framework */; };
 		B86F460418E2AA8600526A35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B86F460218E2AA8600526A35 /* InfoPlist.strings */; };
 		B86F460618E2AA8600526A35 /* SalesforceExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B86F460518E2AA8600526A35 /* SalesforceExampleTests.m */; };
+		B8EDCE8418E4687A00D7DD24 /* SEChatterFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDCE8318E4687A00D7DD24 /* SEChatterFeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		B86F460118E2AA8600526A35 /* SalesforceExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalesforceExampleTests-Info.plist"; sourceTree = "<group>"; };
 		B86F460318E2AA8600526A35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B86F460518E2AA8600526A35 /* SalesforceExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesforceExampleTests.m; sourceTree = "<group>"; };
+		B8EDCE8218E4687A00D7DD24 /* SEChatterFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEChatterFeedViewController.h; sourceTree = "<group>"; };
+		B8EDCE8318E4687A00D7DD24 /* SEChatterFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEChatterFeedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				B86F45ED18E2AA8600526A35 /* SEMasterViewController.m */,
 				B86F45EF18E2AA8600526A35 /* SEDetailViewController.h */,
 				B86F45F018E2AA8600526A35 /* SEDetailViewController.m */,
+				B8EDCE8218E4687A00D7DD24 /* SEChatterFeedViewController.h */,
+				B8EDCE8318E4687A00D7DD24 /* SEChatterFeedViewController.m */,
 				B86F45F218E2AA8600526A35 /* Images.xcassets */,
 				B86F45DE18E2AA8600526A35 /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EDCE8418E4687A00D7DD24 /* SEChatterFeedViewController.m in Sources */,
 				B86F45E818E2AA8600526A35 /* SEAppDelegate.m in Sources */,
 				B86F45F118E2AA8600526A35 /* SEDetailViewController.m in Sources */,
 				B86F45EE18E2AA8600526A35 /* SEMasterViewController.m in Sources */,
@@ -463,6 +469,7 @@
 				B86F460B18E2AA8600526A35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B86F460C18E2AA8600526A35 /* Build configuration list for PBXNativeTarget "SalesforceExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +478,7 @@
 				B86F460E18E2AA8600526A35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

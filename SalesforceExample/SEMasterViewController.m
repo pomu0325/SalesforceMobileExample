@@ -9,6 +9,7 @@
 #import "SEMasterViewController.h"
 
 #import "SEDetailViewController.h"
+#import "SEChatterFeedViewController.h"
 
 @interface SEMasterViewController ()
 
@@ -20,16 +21,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section) {
-        case 0:
-            return 1;
-        default:
+        case 1:
             return 2;
+        default:
+            return 1;
     }
 }
 
@@ -41,6 +42,15 @@
     // 取得したユーザ情報を表示
     _usernameLabel.text = _idInfo[@"username"];
     _displayNameLabel.text = _idInfo[@"display_name"];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqual:@"ChatterFeed"]) {
+        // 遷移先のViewControllerに認証情報を渡す
+        SEChatterFeedViewController *c = segue.destinationViewController;
+        c.authInfo = _authInfo;
+    }
 }
 
 @end
