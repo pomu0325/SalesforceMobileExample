@@ -393,6 +393,7 @@
 				GCC_PREFIX_HEADER = "SalesforceExample/SalesforceExample-Prefix.pch";
 				INFOPLIST_FILE = "SalesforceExample/SalesforceExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B3DCE977-FC4D-417E-96C7-3584DF72F4F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,6 +407,7 @@
 				GCC_PREFIX_HEADER = "SalesforceExample/SalesforceExample-Prefix.pch";
 				INFOPLIST_FILE = "SalesforceExample/SalesforceExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B3DCE977-FC4D-417E-96C7-3584DF72F4F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

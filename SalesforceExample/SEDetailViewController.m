@@ -8,6 +8,7 @@
 
 #import "SEDetailViewController.h"
 #import "SEMasterViewController.h"
+#import "SEAppDelegate.h"
 
 @interface SEDetailViewController ()
 @end
@@ -64,6 +65,22 @@
         }];
     }];
     [task resume];
+    
+    // プッシュ通知用のtokenを登録
+    SEAppDelegate *app = (SEAppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    NSString *url = [authInfo[@"instance_url"] stringByAppendingString:@"/services/data/v29.0/sobjects/MobilePushServiceDevice"];
+    NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    req.HTTPMethod = @"POST";
+    req.HTTPBody = [NSJSONSerialization dataWithJSONObject:@{@"ConnectionToken":app.deviceToken, @"ServiceType":@"Apple"} options:0 error:nil];
+    [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSURLSessionDataTask *registerToken = [session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            NSLog(@"ERROR: %@", error.localizedDescription);
+        }
+    }];
+    [registerToken resume];
     
     return NO;
 }
